@@ -15,8 +15,10 @@
   ];
 
   home.file = {
-    # ".gradle/gradle.properties".text = ''
-    # '';
+    ".config/ulauncher/extensions.json".text = builtins.readFile ./ulauncher/extensions.json;
+    ".config/ulauncher/settings.json".text = builtins.readFile ./ulauncher/settings.json;
+    ".config/ulauncher/shortcuts.json".text = builtins.readFile ./ulauncher/shortcuts.json;
+    ".config/autostart/ulauncher.desktop".text = builtins.readFile ./ulauncher/ulauncher.desktop;
   };
 
   home.sessionVariables = {
