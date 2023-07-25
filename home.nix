@@ -31,20 +31,20 @@
       applications
     );
     files = {
-      ".config/ulauncher/extensions.json".text = builtins.readFile ./ulauncher/extensions.json;
-      ".config/ulauncher/settings.json".text = builtins.readFile ./ulauncher/settings.json;
-      ".config/ulauncher/shortcuts.json".text = builtins.readFile ./ulauncher/shortcuts.json;
-      ".config/autostart/ulauncher.desktop".text = builtins.readFile ./ulauncher/ulauncher.desktop;
+      ".config/ulauncher/extensions.json".source = ./ulauncher/extensions.json;
+      ".config/ulauncher/settings.json".source = ./ulauncher/settings.json;
+      ".config/ulauncher/shortcuts.json".source = ./ulauncher/shortcuts.json;
+      ".config/autostart/ulauncher.desktop".source = ./ulauncher/ulauncher.desktop;
 
-      ".config/libreoffice/4/user/wordbook/standard.dic".text = builtins.readFile ./libreoffice/standard.dic;
+      ".config/libreoffice/4/user/wordbook/standard.dic".source = ./libreoffice/standard.dic;
 
-      ".gitconfig".text = builtins.readFile ./git/.gitconfig;
-      ".gitmessage".text = builtins.readFile ./git/.gitmessage;
-      ".gitignore".text = builtins.readFile ./git/.gitignore;
+      ".gitconfig".source = ./git/.gitconfig;
+      ".gitmessage".source = ./git/.gitmessage;
+      ".gitignore".source = ./git/.gitignore;
 
-      ".config/starship.toml".text = builtins.readFile ./starship.toml;
+      ".config/starship.toml".source = ./starship.toml;
 
-      ".config/qpdfview/shortcuts.conf".text = builtins.readFile ./qpdfview/shortcuts.conf;
+      ".config/qpdfview/shortcuts.conf".source = ./qpdfview/shortcuts.conf;
     };
   in
     desktop-files // icons // files;
