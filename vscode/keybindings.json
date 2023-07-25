@@ -1,0 +1,87 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "f6",
+    "command": "workbench.action.tasks.test"
+  },
+  {
+    "key": "f5",
+    "command": "workbench.action.tasks.build"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "workbench.action.openRecent"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "-workbench.action.tasks.build"
+  },
+  {
+    "key": "ctrl+0",
+    "command": "workbench.action.maximizeEditor"
+  },
+  {
+    "key": "ctrl+q",
+    "command": "-workbench.action.quit"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.files.newUntitledFile",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "editor.action.formatDocument",
+    "when": "editorTextFocus & !editorHasSelection"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "editor.action.formatSelection",
+    "when": "editorTextFocus && editorHasSelection"
+  },
+  {
+    "key": "ctrl+shift+left",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+left",
+    "command": "-workbench.action.terminal.resizePaneLeft",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+right",
+    "command": "-workbench.action.terminal.resizePaneRight",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+right",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "-editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "git.stageSelectedRanges",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "rest-client.request",
+    "when": "editorTextFocus && editorLangId == 'http'"
+  },
+  {
+    "key": "ctrl+alt+r",
+    "command": "-rest-client.request",
+    "when": "editorTextFocus && editorLangId == 'http'"
+  }
+]

@@ -51,6 +51,11 @@
 
       ".config/mimeapps.list".source = ./mimeapps.list;
 
+      ".config/Code/User/snippets/snippets/bash.code-snippets".source = ./vscode/snippets/bash.code-snippets;
+      ".config/Code/User/keybindings.json".source = ./vscode/keybindings.json;
+      ".config/Code/User/locale.json".source = ./vscode/locale.json;
+      ".config/Code/User/settings.json".source = ./vscode/settings.json;
+
       ".gitconfig".source = ./git/.gitconfig;
       ".gitmessage".source = ./git/.gitmessage;
       ".gitignore".source = ./git/.gitignore;
