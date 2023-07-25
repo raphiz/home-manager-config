@@ -31,6 +31,9 @@
       applications
     );
     files = {
+      ".bashrc".source = ./bash/.bashrc;
+      ".bash_completion".source = ./bash/.bash_completion;
+
       ".config/ulauncher/extensions.json".source = ./ulauncher/extensions.json;
       ".config/ulauncher/settings.json".source = ./ulauncher/settings.json;
       ".config/ulauncher/shortcuts.json".source = ./ulauncher/shortcuts.json;
