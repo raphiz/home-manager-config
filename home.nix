@@ -49,6 +49,8 @@
       ".config/xfce4/terminal/terminalrc".source = ./xfce4/terminalrc;
       ".config/xfce4/panel/xfce4-time-out-plugin-11.rc".source = ./xfce4/panel/xfce4-time-out-plugin-11.rc;
 
+      ".config/mimeapps.list".source = ./mimeapps.list;
+
       ".gitconfig".source = ./git/.gitconfig;
       ".gitmessage".source = ./git/.gitmessage;
       ".gitignore".source = ./git/.gitignore;
