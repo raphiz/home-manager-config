@@ -38,6 +38,8 @@
 
       ".config/libreoffice/4/user/wordbook/standard.dic".source = ./libreoffice/standard.dic;
 
+      ".config/Thunar/uca.xml".source = ./thunar/uac.xml;
+
       ".gitconfig".source = ./git/.gitconfig;
       ".gitmessage".source = ./git/.gitmessage;
       ".gitignore".source = ./git/.gitignore;
