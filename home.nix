@@ -21,6 +21,10 @@
     ".config/autostart/ulauncher.desktop".text = builtins.readFile ./ulauncher/ulauncher.desktop;
 
     ".config/libreoffice/4/user/wordbook/standard.dic".text = builtins.readFile ./libreoffice/standard.dic;
+
+    ".gitconfig".text = builtins.readFile ./git/.gitconfig;
+    ".gitmessage".text = builtins.readFile ./git/.gitmessage;
+    ".gitignore".text = builtins.readFile ./git/.gitignore;
   };
 
   home.sessionVariables = {
