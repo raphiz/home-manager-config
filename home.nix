@@ -27,6 +27,8 @@
     ".gitignore".text = builtins.readFile ./git/.gitignore;
 
     ".config/starship.toml".text = builtins.readFile ./starship.toml;
+
+    ".config/qpdfview/shortcuts.conf".text = builtins.readFile ./qpdfview/shortcuts.conf;
   };
 
   home.sessionVariables = {
