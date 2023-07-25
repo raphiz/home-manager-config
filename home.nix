@@ -25,6 +25,8 @@
     ".gitconfig".text = builtins.readFile ./git/.gitconfig;
     ".gitmessage".text = builtins.readFile ./git/.gitmessage;
     ".gitignore".text = builtins.readFile ./git/.gitignore;
+
+    ".config/starship.toml".text = builtins.readFile ./starship.toml;
   };
 
   home.sessionVariables = {
