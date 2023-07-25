@@ -19,6 +19,8 @@
     ".config/ulauncher/settings.json".text = builtins.readFile ./ulauncher/settings.json;
     ".config/ulauncher/shortcuts.json".text = builtins.readFile ./ulauncher/shortcuts.json;
     ".config/autostart/ulauncher.desktop".text = builtins.readFile ./ulauncher/ulauncher.desktop;
+
+    ".config/libreoffice/4/user/wordbook/standard.dic".text = builtins.readFile ./libreoffice/standard.dic;
   };
 
   home.sessionVariables = {
