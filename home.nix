@@ -3,6 +3,10 @@
   pkgs,
   ...
 }: {
+  imports = [
+    ./programs/ulauncher/default.nix
+  ];
+
   home.username = "raphiz";
   home.homeDirectory = "/home/raphiz";
 
@@ -34,11 +38,6 @@
     files = {
       ".bashrc".source = ./bash/.bashrc;
       ".bash_completion".source = ./bash/.bash_completion;
-
-      ".config/ulauncher/extensions.json".source = ./ulauncher/extensions.json;
-      ".config/ulauncher/settings.json".source = ./ulauncher/settings.json;
-      ".config/ulauncher/shortcuts.json".source = ./ulauncher/shortcuts.json;
-      ".config/autostart/ulauncher.desktop".source = ./ulauncher/ulauncher.desktop;
 
       ".config/libreoffice/4/user/wordbook/standard.dic".source = ./libreoffice/standard.dic;
 
@@ -74,6 +73,8 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
+
+  programs.ulauncher.enable = true;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
