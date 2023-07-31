@@ -12,6 +12,7 @@
   home.homeDirectory = "/home/raphiz";
 
   home.packages = [
+    pkgs.delta
     # pkgs.hello
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
     # (pkgs.writeShellScriptBin "my-hello" ''
@@ -20,7 +21,7 @@
   ];
 
   home.file = {
-    ".bashrc".source = ./bash/.bashrc;
+    #".bashrc".source = ./bash/.bashrc;
     ".bash_completion".source = ./bash/.bash_completion;
 
     ".config/libreoffice/4/user/wordbook/standard.dic".source = ./libreoffice/standard.dic;
@@ -52,12 +53,44 @@
     ".config/qpdfview/shortcuts.conf".source = ./qpdfview/shortcuts.conf;
   };
 
-  home.sessionVariables = {
-    # EDITOR = "emacs";
-  };
-
   programs.ulauncher.enable = true;
   webapps.enable = true;
+
+  programs.bash = {
+    enable = true;
+    historySize = 900000;
+    historyFileSize = 100000;
+    shellAliases = {
+      diff = "delta";
+      l = "ls -lah";
+      top = "htop";
+      sudo = "sudo "; # See https://askubuntu.com/questions/22037/aliases-not-available-when-using-sudo
+      yay-update = "yay -Syu --sudoloop";
+      bat = ''bat --theme=ansi --style="numbers,changes,header"'';
+      cat = "bat";
+    };
+
+    profileExtra = ''
+      . $HOME/.nix-profile/etc/profile.d/nix.sh
+    '';
+
+    initExtra = ''
+      function o(){
+        xdg-open "$*" >/dev/null 2>&1 &
+      }
+    '';
+
+    sessionVariables = {
+      EDITOR = "vim";
+    };
+  };
+
+  programs.starship = {
+    enable = true;
+  };
+
+  programs.direnv.enable = true;
+  # programs.direnv.nix-direnv.enable = true;
 
   programs.exa = {
     enable = true;
