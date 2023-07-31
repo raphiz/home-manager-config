@@ -19,7 +19,6 @@ export EDITOR="${EDITOR:-vim}"
 
 # setup aliases and shortcuts
 alias diff='delta'
-alias ls='exa'
 alias l='ls -lah'
 alias top='htop'
 alias sudo='sudo ' # See https://askubuntu.com/questions/22037/aliases-not-available-when-using-sudo

@@ -12,7 +12,6 @@
   home.homeDirectory = "/home/raphiz";
 
   home.packages = [
-    pkgs.exa
     # pkgs.hello
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
     # (pkgs.writeShellScriptBin "my-hello" ''
@@ -59,6 +58,11 @@
 
   programs.ulauncher.enable = true;
   webapps.enable = true;
+
+  programs.exa = {
+    enable = true;
+    enableAliases = true;
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
