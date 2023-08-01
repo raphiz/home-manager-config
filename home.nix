@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./programs/ulauncher/default.nix
+    ./programs/qpdfview/default.nix
     ./webapps/default.nix
   ];
 
@@ -50,12 +51,11 @@
     ".gitignore".source = ./git/.gitignore;
 
     ".config/starship.toml".source = ./starship.toml;
-
-    ".config/qpdfview/shortcuts.conf".source = ./qpdfview/shortcuts.conf;
   };
 
   programs.ulauncher.enable = true;
   webapps.enable = true;
+  programs.qpdfview.enable = true;
 
   programs.bash = {
     enable = true;
