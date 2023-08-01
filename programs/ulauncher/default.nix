@@ -14,7 +14,6 @@ in {
     home.file = {
       ".config/ulauncher/extensions.json".source = ./extensions.json;
       ".config/ulauncher/settings.json".source = ./settings.json;
-      ".config/ulauncher/shortcuts.json".source = ./shortcuts.json;
       ".config/autostart/ulauncher.desktop".source = ./ulauncher.desktop;
     };
   };
