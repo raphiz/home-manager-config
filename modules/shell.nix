@@ -47,7 +47,7 @@
     enable = true;
     nix-direnv.enable = true;
     stdlib = ''
-      # stolen from @i077; store .direnv in cache instead of project dir
+      # https://github.com/direnv/direnv/wiki/Customizing-cache-location
       declare -A direnv_layout_dirs
       direnv_layout_dir() {
           echo "''${direnv_layout_dirs[$PWD]:=$(
