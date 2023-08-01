@@ -4,9 +4,9 @@
   ...
 }: {
   imports = [
-    ./programs/ulauncher/default.nix
-    ./programs/qpdfview/default.nix
-    ./webapps/default.nix
+    ./modules/ulauncher/default.nix
+    ./modules/qpdfview/default.nix
+    ./modules/webapps/default.nix
   ];
 
   home.username = "raphiz";
