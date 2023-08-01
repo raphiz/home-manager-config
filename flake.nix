@@ -22,14 +22,5 @@
       inherit pkgs;
       modules = [./home.nix];
     };
-
-    packages.${system}.diff = pkgs.writeShellScriptBin "diff" ''
-      diff --brief --recursive result/home-files /home/raphiz/ | grep -P '^(?!Only).*'
-    '';
-
-    apps.${system}.diff = {
-      type = "app";
-      program = "${self.packages.${system}.diff}/bin/diff";
-    };
   };
 }
