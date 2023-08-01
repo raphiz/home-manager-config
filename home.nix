@@ -8,6 +8,7 @@
     ./modules/starship/default.nix
 
     ./modules/dotfiles-xfce/default.nix
+    ./modules/vscode/default.nix
     ./modules/ulauncher/default.nix
     ./modules/qpdfview/default.nix
     ./modules/webapps/default.nix
@@ -18,7 +19,6 @@
 
   home.packages = [
     pkgs.delta
-    pkgs.alejandra # for vscode
 
     # pkgs.hello
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
@@ -26,13 +26,6 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
   ];
-
-  home.file = {
-    ".config/Code/User/snippets/snippets/bash.code-snippets".source = ./vscode/snippets/bash.code-snippets;
-    ".config/Code/User/keybindings.json".source = ./vscode/keybindings.json;
-    ".config/Code/User/locale.json".source = ./vscode/locale.json;
-    ".config/Code/User/settings.json".source = ./vscode/settings.json;
-  };
 
   programs.ulauncher.enable = true;
   webapps.enable = true;
