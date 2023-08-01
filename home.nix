@@ -4,6 +4,8 @@
   ...
 }: {
   imports = [
+    ./modules/git/default.nix
+
     ./modules/ulauncher/default.nix
     ./modules/qpdfview/default.nix
     ./modules/webapps/default.nix
@@ -43,10 +45,6 @@
     ".config/Code/User/keybindings.json".source = ./vscode/keybindings.json;
     ".config/Code/User/locale.json".source = ./vscode/locale.json;
     ".config/Code/User/settings.json".source = ./vscode/settings.json;
-
-    ".gitconfig".source = ./git/.gitconfig;
-    ".gitmessage".source = ./git/.gitmessage;
-    ".gitignore".source = ./git/.gitignore;
 
     ".config/starship.toml".source = ./starship.toml;
   };
