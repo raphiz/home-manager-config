@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./modules/git/default.nix
+    ./modules/starship/default.nix
 
     ./modules/ulauncher/default.nix
     ./modules/qpdfview/default.nix
@@ -45,8 +46,6 @@
     ".config/Code/User/keybindings.json".source = ./vscode/keybindings.json;
     ".config/Code/User/locale.json".source = ./vscode/locale.json;
     ".config/Code/User/settings.json".source = ./vscode/settings.json;
-
-    ".config/starship.toml".source = ./starship.toml;
   };
 
   programs.ulauncher.enable = true;
@@ -89,8 +88,6 @@
     };
   };
   programs.autojump.enable = true;
-
-  programs.starship.enable = true;
 
   programs.direnv = {
     enable = true;
