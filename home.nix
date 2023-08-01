@@ -13,6 +13,8 @@
 
   home.packages = [
     pkgs.delta
+    pkgs.alejandra # for vscode
+
     # pkgs.hello
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
     # (pkgs.writeShellScriptBin "my-hello" ''
@@ -21,7 +23,6 @@
   ];
 
   home.file = {
-    #".bashrc".source = ./bash/.bashrc;
     ".bash_completion".source = ./bash/.bash_completion;
 
     ".config/libreoffice/4/user/wordbook/standard.dic".source = ./libreoffice/standard.dic;
@@ -74,6 +75,13 @@
       . $HOME/.nix-profile/etc/profile.d/nix.sh
     '';
 
+    bashrcExtra = ''
+      # Source global definitions
+      if [ -f /etc/bashrc ]; then
+      	. /etc/bashrc
+      fi
+    '';
+
     initExtra = ''
       function o(){
         xdg-open "$*" >/dev/null 2>&1 &
@@ -84,13 +92,24 @@
       EDITOR = "vim";
     };
   };
+  programs.autojump.enable = true;
 
-  programs.starship = {
+  programs.starship.enable = true;
+
+  programs.direnv = {
     enable = true;
+    nix-direnv.enable = true;
+    stdlib = ''
+      # stolen from @i077; store .direnv in cache instead of project dir
+      declare -A direnv_layout_dirs
+      direnv_layout_dir() {
+          echo "''${direnv_layout_dirs[$PWD]:=$(
+              echo -n "${config.xdg.cacheHome}"/direnv/layouts/
+              echo -n "$PWD" | shasum | cut -d ' ' -f 1
+          )}"
+      }
+    '';
   };
-
-  programs.direnv.enable = true;
-  # programs.direnv.nix-direnv.enable = true;
 
   programs.exa = {
     enable = true;
