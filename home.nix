@@ -17,10 +17,6 @@
   home.username = "raphiz";
   home.homeDirectory = "/home/raphiz";
 
-  programs.ulauncher.enable = true;
-  webapps.enable = true;
-  programs.qpdfview.enable = true;
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
