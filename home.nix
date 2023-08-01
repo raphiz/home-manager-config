@@ -24,8 +24,6 @@
   ];
 
   home.file = {
-    ".bash_completion".source = ./bash/.bash_completion;
-
     ".config/libreoffice/4/user/wordbook/standard.dic".source = ./libreoffice/standard.dic;
 
     ".config/Thunar/uca.xml".source = ./thunar/uac.xml;
