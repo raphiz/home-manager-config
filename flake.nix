@@ -20,7 +20,13 @@
   in {
     homeConfigurations."raphiz" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
-      modules = [./home.nix];
+      modules = [
+        ./profiles/xfce.nix
+        {
+          home.username = "raphiz";
+          home.homeDirectory = "/home/raphiz";
+        }
+      ];
     };
   };
 }
