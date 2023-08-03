@@ -21,7 +21,7 @@
     homeConfigurations."raphiz" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       modules = [
-        ./profiles/xfce.nix
+        ./profiles/graphical.nix
         {
           home.username = "raphiz";
           home.homeDirectory = "/home/raphiz";
