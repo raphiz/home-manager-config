@@ -6,6 +6,10 @@
   imports = [
     ./starship/default.nix
   ];
+  home.packages = [
+    pkgs.ast-grep
+    pkgs.jless
+  ];
   programs.bash = {
     enable = true;
     historySize = 900000;
