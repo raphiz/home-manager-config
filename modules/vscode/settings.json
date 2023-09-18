@@ -260,5 +260,6 @@
 },
 "diffEditor.ignoreTrimWhitespace": false,
 "alejandra.program": "/home/raphiz/.nix-profile/bin/alejandra",
-"nix.enableLanguageServer": true
+"nix.enableLanguageServer": true,
+"nix.serverPath": "nixd"
 }
