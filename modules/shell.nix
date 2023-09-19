@@ -2,13 +2,23 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+  md2confluence = pkgs.writeShellApplication {
+    name = "md2confluence";
+    runtimeInputs = [pkgs.pandoc];
+    text = ''
+      pandoc -f gfm-gfm_auto_identifiers -w jira "$1" | sed 's/{anchor:}//g' | xclip -selection clipboard
+      echo "copied to the clipboard"
+    '';
+  };
+in {
   imports = [
     ./starship/default.nix
   ];
   home.packages = [
     pkgs.ast-grep
     pkgs.jless
+    md2confluence
   ];
   programs.bash = {
     enable = true;
